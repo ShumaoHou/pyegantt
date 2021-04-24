@@ -26,6 +26,7 @@ def create_html(html_file_path='pyegantt.html'):
     doc_str = doc_str.replace('&amp;', '&')
     doc_str = doc_str.replace('&lt;', '<')
     doc_str = doc_str.replace('&gt;', '>')
+    doc_str = doc_str.replace('&quot;', '"')
 
     with open(html_file_path, 'w') as f:
         f.write(doc_str)

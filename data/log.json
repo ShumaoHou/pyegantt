@@ -1,0 +1,49 @@
+{
+  "log":{
+    "dimensions":[
+      "package",
+      "Type"
+    ],
+    "data":[
+      [
+        "com.tencent.mm",
+        0
+      ], [
+        "com.tencent.mm",
+        1
+      ], [
+        "com.tencent.mobileqq",
+        0
+      ], [
+        "com.tencent.mobileqq",
+        1
+      ]
+    ]
+  },
+  "timeline":{
+    "dimensions":[
+      "Start Time",
+      "End Time",
+      "State"
+    ],
+    "data":[
+      [
+        1496840400000,
+        1496934000000,
+        "Normal"
+      ], [
+        1496840400000,
+        1496934000000,
+        "Died"
+      ], [
+        1496840400000,
+        1496934000000,
+        "Normal"
+      ], [
+        1496840400000,
+        1496934000000,
+        "Idle"
+      ]
+    ]
+  }
+}
