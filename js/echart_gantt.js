@@ -1,6 +1,7 @@
 var ROOT_PATH = 'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
 
 var chartDom = document.getElementById('main');
+chartDom.style.height = window.innerHeight - 50 +'px';
 var myChart = echarts.init(chartDom);
 var option;
 
