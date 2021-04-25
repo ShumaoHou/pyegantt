@@ -9,23 +9,8 @@ var HEIGHT_RATIO = 0.6;
 var DIM_CATEGORY_INDEX = 0;
 var DIM_TIME_ARRIVAL = 1;
 var DIM_TIME_DEPARTURE = 2;
-var DATA_ZOOM_AUTO_MOVE_THROTTLE = 30;
-var DATA_ZOOM_X_INSIDE_INDEX = 1;
-var DATA_ZOOM_Y_INSIDE_INDEX = 3;
-var DATA_ZOOM_AUTO_MOVE_SPEED = 0.2;
-var DATA_ZOOM_AUTO_MOVE_DETECT_AREA_WIDTH = 30;
 
-var _draggable;
-var _draggingEl;
-var _dropShadow;
-var _draggingCursorOffset = [0, 0];
-var _draggingTimeLength;
-var _draggingRecord;
-var _dropRecord;
-var _cartesianXBounds = [];
-var _cartesianYBounds = [];
 var _rawData;
-var _autoDataZoomAnimator;
 
 $.getJSON('../data/airport-schedule.json', function (rawData) {
     _rawData = rawData;
@@ -165,12 +150,6 @@ function renderGanttItem(params, api) {
     var categoryIndex = api.value(DIM_CATEGORY_INDEX);
     var timeArrival = api.coord([api.value(DIM_TIME_ARRIVAL), categoryIndex]);
     var timeDeparture = api.coord([api.value(DIM_TIME_DEPARTURE), categoryIndex]);
-
-    var coordSys = params.coordSys;
-    _cartesianXBounds[0] = coordSys.x;
-    _cartesianXBounds[1] = coordSys.x + coordSys.width;
-    _cartesianYBounds[0] = coordSys.y;
-    _cartesianYBounds[1] = coordSys.y + coordSys.height;
 
     var barLength = timeDeparture[0] - timeArrival[0];
     // Get the heigth corresponds to length 1 on y axis.
