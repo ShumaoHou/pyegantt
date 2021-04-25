@@ -17,7 +17,7 @@ def create_html(html_file_path='pyegantt.html'):
 
     with doc:
         with div():
-            attr(id='main', style='width: 1600px; height:800px;')
+            attr(id='main', style='width: 100%;')
         with script(js):
             attr(type='text/javascript')
 
